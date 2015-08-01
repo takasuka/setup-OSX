@@ -5,7 +5,7 @@
   vars: 
     homebrew_taps:
       - homebrew/php
-      - caskroom/cask/brew-cask
+      - caskroom/cask
     homebrew_packages:
       - ansible
       - curl
@@ -19,8 +19,8 @@
       - composer
       - php54
       - php54-xdebug
-      # caskroom/cask/brew-cask
-      - cask
+      # caskroom/cask
+      - brew-cask
     homebrew_cask_packages:
       - firefox
       - google-chrome
