@@ -26,7 +26,7 @@
   brew install python absible git
   ```   
   ```
-  mkdir ~/pj/ & cd ~/pj
+  mkdir ~/pj/ && cd ~/pj
   ```  
 7. Clone Ansible configiration  
   ```
