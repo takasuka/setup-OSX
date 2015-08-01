@@ -30,7 +30,7 @@
   ```  
 7. Clone Ansible configiration  
   ```
-  git clone git@github.com:takasuka/setup-OSX.git
+  git clone https://github.com/takasuka/setup-OSX.git
   ```  
 8. aa
   
