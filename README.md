@@ -32,5 +32,9 @@
   ```
   git clone https://github.com/takasuka/setup-OSX.git
   ```  
-8. aa
+8. Run Ansible  
+  ```
+  ansible-playbook -i hosts osx.yml
+  ```  
+9. aaaa
   
