@@ -21,9 +21,16 @@
   ```
   brew doctor
   ```
-6. Install python & Ansible
+6. Install python & Ansible & git  
   ```
-  brew install python
-  brew install ansible
+  brew install python absible git
+  ```   
   ```
-7. aaaaaa
+  mkdir ~/pj/ & cd ~/pj
+  ```  
+7. Clone Ansible configiration  
+  ```
+  git clone git@github.com:takasuka/setup-OSX.git
+  ```  
+8. aa
+  
