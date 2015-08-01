@@ -19,7 +19,6 @@
       - composer
       - php54
       - php54-xdebug
-      - php70
     homebrew_cask_packages:
       - firefox
       - google-chrome
