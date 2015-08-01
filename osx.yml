@@ -3,18 +3,55 @@
   gather_facts: no
   sudo: no
   vars: 
+    homebrew_taps:
+      - homebrew/php
     homebrew_packages:
-     - curl
-     - jq
-     - openssl
-     - python
-     - tree
-     - wget
-     - zsh
-  tasks:
-     - name: Install brew packages
-       homebrew: name={{ item }}
-       with_items: homebrew_packages
+      - ansible
+      - brew-cask
+      - curl
+      - jq
+      - openssl
+      - python
+      - tree
+      - wget
+      - zsh
+      # homebrew/php
+      - composer
+      - php54
+      - php54-xdebug
+      - php70
+    homebrew_cask_packages:
+      - firefox
+      - google-chrome
+      - intellij-idea
+      - iterm2
+      - java
+      - kindle
+      - send-to-kindle
+      - skitch
+      - skype
+      - sourcetree
+      - totalterminal
+      - vagrant
+      - virtualbox
 
-     - name: Instakk oh-my-zsh
-       shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  tasks:
+    # brew tap
+    - name: Add repository for brew
+      homebrew_tap: tap={{ item }} state=present
+      with_items: homebrew_taps
+    # brew
+    - name: Install brew packages
+      homebrew: name={{ item }}
+      with_items: homebrew_packages
+
+    # brew-cask
+    - name: Install brew-cask
+      homebrew_cask: name={{ item }} state=present
+      with_items: homebrew_cask_packages 
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
+
+    # oh-my-zsh
+    - name: Instakk oh-my-zsh
+      shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
