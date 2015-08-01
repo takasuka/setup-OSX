@@ -1,1 +1,29 @@
 # setup-OSX
+
+1. Install XCode from AppStore.
+2. Agree Xcode License.  
+  ```
+  sudo xcodebuild -license
+  ```  
+  Type 'agree'  
+3. Install XCode Command Line Tool  
+  ```
+  xcode-select --install
+  ```
+4. Install homebrew  
+  ```
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+5. Update brew  
+  ```
+  brew update
+  ```  
+  ```
+  brew doctor
+  ```
+6. Install python & Ansible
+  ```
+  brew install python
+  brew install ansible
+  ```
+7. aaaaaa
