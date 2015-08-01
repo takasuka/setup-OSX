@@ -5,9 +5,9 @@
   vars: 
     homebrew_taps:
       - homebrew/php
+      - caskroom/cask/brew-cask
     homebrew_packages:
       - ansible
-      - brew-cask
       - curl
       - jq
       - openssl
@@ -19,6 +19,8 @@
       - composer
       - php54
       - php54-xdebug
+      # caskroom/cask/brew-cask
+      - cask
     homebrew_cask_packages:
       - firefox
       - google-chrome
@@ -39,6 +41,7 @@
     - name: Add repository for brew
       homebrew_tap: tap={{ item }} state=present
       with_items: homebrew_taps
+
     # brew
     - name: Install brew packages
       homebrew: name={{ item }}
