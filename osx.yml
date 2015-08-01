@@ -4,7 +4,13 @@
   sudo: no
   vars: 
     homebrew_packages:
+      - curl
+      - jq
+      - openssl
       - python
+      - tree
+      - wget
+      - zsh
   tasks:
       - name: Install brew packages
         homebrew: name={{ item }}
