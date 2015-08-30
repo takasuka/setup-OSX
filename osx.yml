@@ -22,8 +22,11 @@
       # caskroom/cask
       - brew-cask
     homebrew_cask_packages:
+      - 1password
+      - dropbox
       - firefox
       - google-chrome
+      - google-japanese-ime
       - intellij-idea
       - iterm2
       - java
@@ -57,3 +60,13 @@
     # oh-my-zsh
     - name: Instakk oh-my-zsh
       shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+    # Run mac-setting.sh
+    - name: Change Mac Settings
+      shell: ./mac_setting.sh
+      sudo: yes
+
+    # Shutdown & Restart
+    - name: Shutdown & Restart
+      shell: ./mac_restart.sh 
+      sudo: yes
